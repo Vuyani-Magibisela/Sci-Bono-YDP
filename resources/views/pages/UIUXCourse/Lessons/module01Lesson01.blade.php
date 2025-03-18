@@ -1,40 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is UX Design? - UI/UX Design Systems</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/CoursePageStyles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="../img/logo.svg" alt="YDP Training Logo">
-                <h1>YDP<span class="highlight">Training</span></h1>
-            </div>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../../index.html#about">About</a></li>
-                    <li><a href="../../index.html#courses" class="active">Courses</a></li>
-                    <li><a href="../../index.html#benefits">Benefits</a></li>
-                    <li><a href="../../index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-controls">
-                <a href="../login.html" class="btn btn-outline">Sign In</a>
-                <a href="../register.html" class="btn btn-primary">Register</a>
-            </div>
-        </div>
-    </header>
+@extends('layouts.app')
 
-    <main>
+@section('title', 'module01Lesson01')
+
+@section('content')
+
+<main>
         <div class="course-breadcrumb">
             <div class="container">
                 <ul>
@@ -379,7 +349,5 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/lesson.js"></script>
-</body>
-</html>
+    <script src="../../../public/js/UIUXScripts.js"></script>
+    <script src="../../../public/js/UIUXLesson.js"></script>

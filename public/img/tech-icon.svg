@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB4B4B" />
+      <stop offset="100%" stop-color="#e84393" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="white" stroke="url(#techGradient)" stroke-width="4"/>
+  
+  <!-- Circuit board patterns -->
+  <path d="M30,50 L80,50 L80,80 L120,80 L120,30" stroke="url(#techGradient)" stroke-width="3" fill="none"/>
+  <path d="M30,100 L60,100 L60,150 L130,150 L130,120 L170,120" stroke="url(#techGradient)" stroke-width="3" fill="none"/>
+  <path d="M100,30 L100,60 L150,60 L150,130 L170,130" stroke="url(#techGradient)" stroke-width="3" fill="none"/>
+  
+  <!-- Connection points -->
+  <circle cx="80" cy="50" r="5" fill="url(#techGradient)"/>
+  <circle cx="80" cy="80" r="5" fill="url(#techGradient)"/>
+  <circle cx="120" cy="80" r="5" fill="url(#techGradient)"/>
+  <circle cx="60" cy="100" r="5" fill="url(#techGradient)"/>
+  <circle cx="60" cy="150" r="5" fill="url(#techGradient)"/>
+  <circle cx="130" cy="150" r="5" fill="url(#techGradient)"/>
+  <circle cx="100" cy="60" r="5" fill="url(#techGradient)"/>
+  <circle cx="150" cy="60" r="5" fill="url(#techGradient)"/>
+  <circle cx="150" cy="130" r="5" fill="url(#techGradient)"/>
+  <circle cx="130" cy="120" r="5" fill="url(#techGradient)"/>
+  
+  <!-- Central CPU -->
+  <rect x="70" y="90" width="60" height="40" rx="5" fill="url(#techGradient)" opacity="0.7"/>
+  <rect x="75" y="95" width="50" height="30" rx="3" fill="white" opacity="0.5"/>
+  <path d="M80,100 L95,100 M80,105 L120,105 M80,110 L110,110 M80,115 L90,115" stroke="white" stroke-width="2"/>
+</svg>
