@@ -1,38 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI/UX Design Systems - YDP Training</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/CoursePageStyles.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="img/logo.svg" alt="YDP Training Logo">
-                <h1>YDP<span class="highlight">Training</span></h1>
-            </div>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#courses" class="active">Courses</a></li>
-                    <li><a href="index.html#benefits">Benefits</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-controls">
-                <a href="login.html" class="btn btn-outline">Sign In</a>
-                <a href="register.html" class="btn btn-primary">Register</a>
-            </div>
-        </div>
-    </header>
+@extends('layouts.app')
+
+@section('title', 'UI/UX Design Systems')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/CoursePageStyles.css') }}">
+@endsection
+
+@section('content')
 
     <main>
         <section class="course-header">
@@ -60,7 +34,7 @@
                         <p>By the end of this course, you'll have the skills to create wireframes, conduct user research, build prototypes, and understand how design systems create cohesive product experiences.</p>
                     </div>
                     <div class="description-image">
-                        <img src="img/ux-illustration.svg" alt="UI/UX Design Illustration">
+                    <img src="{{ asset('img/ux-illustration.svg') }}" alt="UI/UX Design Illustration">
                     </div>
                 </div>
             </div>
@@ -74,7 +48,7 @@
                     <div class="module-card">
                         <h3>Day 1: UX Design Foundations</h3>
                         <p>Learn about the history of UX design, key concepts, and fundamental principles of design thinking.</p>
-                        <a href="modules/module1.html" class="module-link">Explore Module</a>
+                        <a href="{{ route('courses.module', 'module1') }}" class="module-link">Explore Module</a>
                     </div>
 
                     <div class="module-card">
@@ -190,55 +164,8 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>YDP Training</h3>
-                    <p>Sci-Bono Youth Development Program providing quality ICT education to unemployed youth.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="index.html#about">About</a></li>
-                            <li><a href="index.html#courses">Courses</a></li>
-                            <li><a href="index.html#benefits">Benefits</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Courses</h4>
-                        <ul>
-                            <li><a href="#" class="active-link">UI/UX Design Systems</a></li>
-                            <li><a href="#" class="disabled-link">Web Development</a></li>
-                            <li><a href="#" class="disabled-link">Programming</a></li>
-                            <li><a href="#" class="disabled-link">Internet of Things</a></li>
-                            <li><a href="#" class="disabled-link">Linux Essentials</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Contact Info</h4>
-                        <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> Sci-Bono Discovery Centre, Newtown, Johannesburg</li>
-                            <li><i class="fas fa-phone"></i> (011) 639-8400</li>
-                            <li><i class="fas fa-envelope"></i> info@sci-bono.co.za</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 YDP Training - Sci-Bono Youth Development Program. Created by Vuyani Magibisela.</p>
-            </div>
-        </div>
-    </footer>
+    @endsection
 
-    <script src="../js/UIUXScripts.js"></script>
-</body>
-</html>
+@section('scripts')
+    <script src="{{ asset('js/UIUXScripts.js') }}"></script>
+@endsection

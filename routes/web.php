@@ -15,13 +15,12 @@ Route::get('/register', [AuthController::class, 'showRegister'])->name('register
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Course routes
 Route::prefix('courses')->name('courses.')->group(function () {
-    Route::get('/uiux', [CourseController::class, 'uiuxCourse'])->name('uiux');
+    Route::get('/uiux-course/coursepage', [CourseController::class, 'uiuxCourse'])->name('uiux-coursepage');
     
-    // Module routes
-    Route::get('/uiux/modules/{module}', [CourseController::class, 'showModule'])->name('module');
+     // Module routes
+     Route::get('/uiux/modules/{module}', [CourseController::class, 'showModule'])->name('module');
     
-    // Lesson routes
-    Route::get('/uiux/lessons/{lesson}', [CourseController::class, 'showLesson'])->name('lesson');
+     // Lesson routes
+     Route::get('/uiux/lessons/{lesson}', [CourseController::class, 'showLesson'])->name('lesson');
 });
