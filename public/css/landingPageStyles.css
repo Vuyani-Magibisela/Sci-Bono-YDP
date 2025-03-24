@@ -46,6 +46,33 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Auth header styles */
+.user-greeting {
+    margin-right: 1rem;
+    color: var(--text-dark);
+}
+
+.logout-form {
+    display: inline;
+}
+
+.logout-form button {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.logout-form button:hover {
+    background-color: var(--grey-light);
+    transform: translateY(-3px);
+}
+
 .container {
     width: 90%;
     max-width: 1200px;

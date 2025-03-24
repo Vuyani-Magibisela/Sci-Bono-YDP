@@ -38,7 +38,7 @@
                         <div class="chapter-number">1.0</div>
                         <h3 class="chapter-title">What is UX Design?</h3>
                         <p class="chapter-description">Understanding the definition, scope and importance of User Experience Design.</p>
-                        <a href="../lessons/module01Lesson01.html" class="chapter-link">Begin Chapter</a>
+                        <a href="{{ route('courses.lesson', 'module01Lesson01') }}" class="chapter-link">Start Lesson</a>
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@
                         <div class="chapter-number">1.1</div>
                         <h3 class="chapter-title">Introduction to Design Thinking</h3>
                         <p class="chapter-description">Explore the human-centered problem-solving approach used in UX design.</p>
-                        <a href="../lessons/day1-design-thinking.html" class="chapter-link">Begin Chapter</a>
+                        <a href="{{ route('courses.lesson', 'module01Lesson02') }}" class="chapter-link">Start Lesson</a>
                     </div>
                 </div>
 

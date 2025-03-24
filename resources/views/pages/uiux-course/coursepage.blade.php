@@ -16,7 +16,11 @@
                     <p>Master user experience design principles and create compelling digital experiences</p>
                 </div>
                 <div class="course-actions">
-                    <button class="btn btn-primary">Enroll Now</button>
+                    @if(Auth::check())
+                        <a href="{{ route('courses.uiux-coursepage') }}" class="btn btn-primary">Enroll Now</a>
+                    @else
+                        <a href="{{ route('login') }}?redirect={{ urlencode(route('courses.uiux-coursepage')) }}" class="btn btn-primary">Enroll Now</a>
+                    @endif
                     <button class="btn btn-outline download-btn">
                         <i class="fas fa-download"></i> Download PDF
                     </button>
@@ -159,7 +163,11 @@
             <div class="container">
                 <h2>Ready to Start Your UX Design Journey?</h2>
                 <p>Join this comprehensive course and take your first step toward becoming a UX designer.</p>
-                <button class="btn btn-primary">Enroll Now - It's Free</button>
+                @if(Auth::check())
+                    <a href="{{ route('courses.uiux-coursepage') }}" class="btn btn-primary">Enroll Now - It's Free</a>
+                @else
+                    <a href="{{ route('login') }}?redirect={{ urlencode(route('courses.uiux-coursepage')) }}" class="btn btn-primary">Enroll Now - It's Free</a>
+                @endif
             </div>
         </section>
     </main>

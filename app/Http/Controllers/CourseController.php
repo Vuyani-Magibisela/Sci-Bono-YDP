@@ -19,6 +19,6 @@ class CourseController extends Controller
     
     public function showLesson($lesson)
     {
-        return view('courses.uiux.lessons.' . $lesson);
+        return view('pages.uiux-course.Lessons.' . $lesson);
     }
 }

@@ -1,21 +1,23 @@
 @extends('layouts.app')
 
-@section('title', 'module01Lesson01')
+@section('title', 'What is UX Design?')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/CoursePageStyles.css') }}">
+@endsection
 
 @section('content')
-
-<main>
-        <div class="course-breadcrumb">
-            <div class="container">
-                <ul>
-                    <li><a href="../course-uxdesign.html">UI/UX Design Systems</a></li>
-                    <li><a href="../modules/day1.html">Module 1: UX Design Foundations</a></li>
-                    <li>What is UX Design?</li>
-                </ul>
-            </div>
+    <div class="course-breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="{{ route('courses.uiux-coursepage') }}">UI/UX Design Systems</a></li>
+                <li><a href="{{ route('courses.module', 'module1') }}">Module 1: UX Design Foundations</a></li>
+                <li>What is UX Design?</li>
+            </ul>
         </div>
+    </div>
 
-        <div class="lesson-container">
+    <div class="lesson-container">
             <div class="lesson-header">
                 <span class="lesson-number">Lesson 1.0</span>
                 <h1>What is UX Design?</h1>
@@ -181,19 +183,19 @@
                                 <label class="quiz-option">
                                     <input type="radio" name="q1" value="a">
                                     <span>Making products visually attractive</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q1" value="b">
                                     <span>Creating user-centric experiences that enhance satisfaction</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q1" value="c">
                                     <span>Developing complex technical solutions</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q1" value="d">
                                     <span>Maximizing business profits</span>
-                                </label>
+                                </label><br><br>
                             </div>
                         </div>
 
@@ -203,19 +205,19 @@
                                 <label class="quiz-option">
                                     <input type="radio" name="q2" value="a">
                                     <span>User Research</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q2" value="b">
                                     <span>Information Architecture</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q2" value="c">
                                     <span>Programming Languages</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q2" value="d">
                                     <span>Usability Testing</span>
-                                </label>
+                                </label><br><br>
                             </div>
                         </div>
 
@@ -225,19 +227,19 @@
                                 <label class="quiz-option">
                                     <input type="radio" name="q3" value="a">
                                     <span>Up to $10</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q3" value="b">
                                     <span>Up to $50</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q3" value="c">
                                     <span>Up to $100</span>
-                                </label>
+                                </label><br><br>
                                 <label class="quiz-option">
                                     <input type="radio" name="q3" value="d">
                                     <span>Up to $500</span>
-                                </label>
+                                </label><br><br>
                             </div>
                         </div>
 
@@ -247,8 +249,8 @@
 
                 <div class="lesson-section">
                     <h2>Additional Resources</h2>
-                    <div class="resources-list">
-                        <div class="resource-item">
+                    <div class="resources-list" >
+                        <div class="resource-card">
                             <i class="fas fa-book"></i>
                             <div>
                                 <h4>The Design of Everyday Things</h4>
@@ -256,7 +258,7 @@
                                 <a href="#" target="_blank">Learn More</a>
                             </div>
                         </div>
-                        <div class="resource-item">
+                        <div class="resource-card " style="margin-top: 1rem;">
                             <i class="fas fa-globe"></i>
                             <div>
                                 <h4>Nielsen Norman Group</h4>
@@ -264,7 +266,7 @@
                                 <a href="#" target="_blank">Visit Website</a>
                             </div>
                         </div>
-                        <div class="resource-item">
+                        <div class="resource-card" style="margin-top: 1rem;">
                             <i class="fas fa-file-pdf"></i>
                             <div>
                                 <h4>UX Design Fundamentals</h4>
@@ -276,7 +278,7 @@
                 </div>
             </div>
 
-            <div class="lesson-completion">
+            <div class="lesson-completion" style="margin-top: 1rem;">
                 <button class="btn btn-primary mark-complete-btn">Mark as Complete</button>
                 <div class="completion-progress">
                     <div class="progress-text">
@@ -290,64 +292,19 @@
             </div>
 
             <div class="lesson-navigation">
-                <a href="../modules/day1.html" class="nav-button">
+                <a href="{{ route('courses.module', 'module1') }}" class="nav-button">
                     <i class="fas fa-arrow-left"></i> Back to Module
                 </a>
-                <a href="../lessons/day1-design-thinking.html" class="nav-button next">
+                <a href="{{ route('courses.lesson', 'module01Lesson02') }}" class="nav-button next">
                     Next Lesson: Introduction to Design Thinking <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>YDP Training</h3>
-                    <p>Sci-Bono Youth Development Program providing quality ICT education to unemployed youth.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="../index.html">Home</a></li>
-                            <li><a href="../index.html#about">About</a></li>
-                            <li><a href="../index.html#courses">Courses</a></li>
-                            <li><a href="../index.html#benefits">Benefits</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Courses</h4>
-                        <ul>
-                            <li><a href="../course-uxdesign.html" class="active-link">UI/UX Design Systems</a></li>
-                            <li><a href="#" class="disabled-link">Web Development</a></li>
-                            <li><a href="#" class="disabled-link">Programming</a></li>
-                            <li><a href="#" class="disabled-link">Internet of Things</a></li>
-                            <li><a href="#" class="disabled-link">Linux Essentials</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Contact Info</h4>
-                        <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> Sci-Bono Discovery Centre, Newtown, Johannesburg</li>
-                            <li><i class="fas fa-phone"></i> (011) 639-8400</li>
-                            <li><i class="fas fa-envelope"></i> info@sci-bono.co.za</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 YDP Training - Sci-Bono Youth Development Program. Created by Vuyani Magibisela.</p>
-            </div>
-        </div>
-    </footer>
+    @endsection
 
-    <script src="../../../public/js/UIUXScripts.js"></script>
-    <script src="../../../public/js/UIUXLesson.js"></script>
+@section('scripts')
+    <script src="{{ asset('js/UIUXScripts.js') }}"></script>
+    <script src="{{ asset('js/UIUXLesson.js') }}"></script>
+@endsection

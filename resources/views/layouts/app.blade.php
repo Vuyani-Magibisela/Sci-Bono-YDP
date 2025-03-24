@@ -29,8 +29,18 @@
                 </ul>
             </nav>
             <div class="header-controls">
+            @auth
+                <!-- Show these links when user is logged in -->
+                <span class="user-greeting">Hello, {{ Auth::user()->name }}</span>
+                <form method="POST" action="{{ route('logout') }}" class="logout-form">
+                    @csrf
+                    <button type="submit" class="btn btn-outline">Logout</button>
+                </form>
+            @else
+                <!-- Show these links when user is NOT logged in -->
                 <a href="{{ route('login') }}" class="btn btn-outline">Sign In</a>
                 <a href="{{ route('register') }}" class="btn btn-primary">Register</a>
+            @endauth
             </div>
         </div>
     </header>
